@@ -13,7 +13,7 @@
 	Distributed as-is; no warranty is given. 
 */
 // Include the library:
-#include "SparkFunMMA8452Q/SparkFunMMA8452Q.h"
+#include "SparkFunMMA8452Q.h"
 
 // Create an MMA8452Q object, used throughout the rest of the sketch.
 MMA8452Q accel; // Default constructor, SA0 pin is HIGH
