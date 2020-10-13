@@ -104,19 +104,21 @@ public:
 	
     short x, y, z;
 	float cx, cy, cz;
-private:
-	byte address;
-	MMA8452Q_Scale scale;
-	
+
+protected:
 	void standby();
 	void active();
-	void setupPL();
-	void setScale(MMA8452Q_Scale fsr);
-	void setODR(MMA8452Q_ODR odr);
 	void writeRegister(MMA8452Q_Register reg, byte data);
     void writeRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
 	byte readRegister(MMA8452Q_Register reg);
     byte readRegisters(MMA8452Q_Register reg, byte *buffer, byte len);
+
+private:
+	byte address;
+	MMA8452Q_Scale scale;
+	void setupPL();
+	void setScale(MMA8452Q_Scale fsr);
+	void setODR(MMA8452Q_ODR odr);
 };
 
 #endif
